@@ -20,7 +20,7 @@ setTimeout(function () {
   }
   else {
       alert(
-        `hai azzeccato ${numeriIndovinati.length} numeri. ti sei ricordato le posizioni ${numeriIndovinati}`
+        `hai azzeccato ${numeriIndovinati.length} numeri. ti sei ricordato le posizioni ${numeriIndovinati.join("-")}`
       );
   }
 }, 4000);
@@ -39,7 +39,7 @@ function getRandom (array) {
     const random = getRndInteger(1, 9);
     array.push(random);
   }
-  numberBox.innerText = array;
+  numberBox.innerText = array.join(", ");
   return array;
 }
 
